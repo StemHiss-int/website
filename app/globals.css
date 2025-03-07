@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 20% 96%;
+    --foreground: 150 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 50% 10%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 150 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --tertiary: 120 30% 45%;
+    --tertiary-foreground: 0 0% 98%;
+
+    --quaternary: 100 30% 50%;
+    --quaternary-foreground: 150 5.9% 10%;
+
+    --muted: 150 10% 94%;
+    --muted-foreground: 150 20% 40%;
+
+    --accent: 142 76% 87%;
+    --accent-foreground: 150 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 20% 90%;
+    --input: 150 20% 90%;
+    --ring: 150 50% 10%;
+
+    --radius: 1.5rem;
+  }
+
+  .dark {
+    --background: 150 50% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 150 50% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 150 50% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 150 5.9% 10%;
+
+    --secondary: 150 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --tertiary: 120 30% 45%;
+    --tertiary-foreground: 0 0% 98%;
+
+    --quaternary: 100 30% 50%;
+    --quaternary-foreground: 150 5.9% 10%;
+
+    --muted: 150 30% 15.9%;
+    --muted-foreground: 150 20% 64.9%;
+
+    --accent: 142 76% 47%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 30% 15.9%;
+    --input: 150 30% 15.9%;
+    --ring: 150 40% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .nav-container {
+    @apply fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-secondary via-tertiary to-primary text-white;
+  }
+
+  .nav-content {
+    @apply container mx-auto px-4 flex items-center justify-between h-16;
+  }
+
+  .nav-menu {
+    @apply hidden md:flex items-center space-x-4;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 rounded-full hover:bg-white/20 transition-colors;
+  }
+
+  .nav-link.active {
+    @apply bg-white/30 font-medium;
+  }
+
+  .mobile-menu {
+    @apply fixed inset-0 bg-secondary/95 backdrop-blur-sm z-50 transition-transform duration-300 ease-in-out;
+  }
+
+  .mobile-menu-content {
+    @apply flex flex-col h-full pt-20 px-6 overflow-y-auto;
+  }
+
+  .mobile-menu-link {
+    @apply px-4 py-3 rounded-full hover:bg-white/20 transition-colors text-white mb-2;
+  }
+
+  .mobile-menu-link.active {
+    @apply bg-white/30 font-medium;
+  }
+
+  .page-content {
+    @apply pt-16 flex-1 flex flex-col;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-secondary via-tertiary to-primary;
+  }
+
+  .page-heading {
+    @apply font-bold text-5xl md:text-6xl lg:text-7xl font-serif italic text-center py-8;
+  }
+
+  .content-container {
+    @apply container mx-auto px-4 py-6 max-w-5xl;
+  }
+
+  .blob-shape {
+    border-radius: 71% 29% 41% 59% / 59% 43% 57% 41%;
+  }
+
+  .blob-shape-alt {
+    border-radius: 37% 63% 56% 44% / 49% 56% 44% 51%;
+  }
+
+  .blob-shape-small {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+
+  .floating-blob {
+    @apply absolute blob-shape-small;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .blog-header {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--tertiary)) 50%, hsl(var(--primary)) 100%);
+    border-radius: 0 0 30% 70% / 0 0 30% 70%;
+    min-height: 250px;
+  }
+
+  .blog-card {
+    @apply overflow-hidden transition-all duration-300 hover:shadow-xl;
+    border-radius: 20px;
+    transform: rotate(-1deg);
+  }
+
+  .blog-card:nth-child(even) {
+    transform: rotate(1deg);
+  }
+
+  .blog-card:hover {
+    transform: scale(1.02) rotate(0);
+  }
+
+  .blog-card-content {
+    @apply p-6 bg-white;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .blog-card-image {
+    @apply relative w-full h-48 overflow-hidden;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .google-doc-embed {
+    @apply w-full rounded-3xl overflow-hidden shadow-lg;
+    min-height: 800px;
+    border: none;
+  }
+
+  .coming-soon-card {
+    @apply relative overflow-hidden bg-gradient-to-br from-secondary/10 via-tertiary/10 to-primary/10 rounded-3xl p-8 text-center;
+  }
+
+  .coming-soon-blob {
+    @apply absolute blob-shape-small opacity-30;
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
