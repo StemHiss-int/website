@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "STEMHiss - Demystifying STEM Through History",
   description: "A student-led organization dedicated to communicating STEM history",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -30,4 +29,3 @@ export default function RootLayout({
 
 
 
-import './globals.css'

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function GregorMendelPage() {
   // Google Doc ID for embedding
-  const googleDocId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms" // Example Google Doc ID
+  const googleDocId = "2PACX-1vSJiLYBOwY0VxUwiEm8e33IrNc3VU8CFXQMyTeVPHFAqzk5CeHVTaq1F89F3xXWIAQuL1DwRorgLsmq" // Example Google Doc ID - replace with your actual Google Doc ID
   const googleDocEmbedUrl = `https://docs.google.com/document/d/${googleDocId}/pub?embedded=true`
 
   return (
@@ -17,7 +17,7 @@ export default function GregorMendelPage() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 md:p-12">
-          <div className="bg-secondary text-white px-4 py-1 rounded-full text-sm inline-block mb-4 w-fit">Genetics</div>
+          <div className="bg-primary text-white px-4 py-1 rounded-full text-sm inline-block mb-4 w-fit">Genetics</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif mb-2">Gregor Mendel</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4">The Father of Modern Genetics</p>
           <div className="flex items-center text-white/80 text-sm md:text-base">

@@ -43,7 +43,7 @@ export default function Navbar() {
 
   const isActive = (href: string) => pathname === href
 
-  const renderNavItems = (items: typeof navItems, mobile = false) => {
+  const renderNavItems = (items: any[], mobile = false) => {
     return items.map((item, index) => {
       const hasSubItems = item.subItems && item.subItems.length > 0
       const isSubMenuOpen = openSubMenus.includes(item.name)
@@ -66,7 +66,7 @@ export default function Navbar() {
                 mobile && isSubMenuOpen ? "block" : mobile ? "hidden" : "",
               )}
             >
-              {item.subItems.map((subItem, subIndex) => (
+              {item.subItems.map((subItem: any, subIndex: number) => (
                 <div key={subIndex}>
                   <Link
                     href={subItem.href}
@@ -82,7 +82,7 @@ export default function Navbar() {
 
                   {subItem.subItems && (
                     <div className={mobile ? "ml-4 mt-1" : "ml-4"}>
-                      {subItem.subItems.map((nestedItem, nestedIndex) => (
+                      {subItem.subItems.map((nestedItem: any, nestedIndex: number) => (
                         <Link
                           key={nestedIndex}
                           href={nestedItem.href}
