@@ -40,7 +40,7 @@ export default function Contacts() {
                     <div className="mt-2 flex items-center gap-2 text-sm">
                       <Mail className="h-4 w-4" />
                       <a
-                        href="https://linktr.ee/adilm."
+                        href="https://linktr.ee/adilm.0"
                         target="_blank"
                         rel="noreferrer"
                         className="font-medium underline underline-offset-4"
