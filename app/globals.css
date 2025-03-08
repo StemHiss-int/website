@@ -140,61 +140,16 @@
     @apply container mx-auto px-4 py-6 max-w-5xl;
   }
 
-  .blob-shape {
-    border-radius: 71% 29% 41% 59% / 59% 43% 57% 41%;
-  }
-
-  .blob-shape-alt {
-    border-radius: 37% 63% 56% 44% / 49% 56% 44% 51%;
-  }
-
-  .blob-shape-small {
-    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-  }
-
-  .floating-blob {
-    @apply absolute blob-shape-small;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-  }
-
-  .blog-header {
-    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--tertiary)) 50%, hsl(var(--primary)) 100%);
-    border-radius: 0 0 30% 70% / 0 0 30% 70%;
-    min-height: 250px;
-  }
-
   .blog-card {
-    @apply overflow-hidden transition-all duration-300 hover:shadow-xl bg-white;
-    border-radius: 20px;
-    transform: rotate(-1deg);
-  }
-
-  .blog-card:nth-child(even) {
-    transform: rotate(1deg);
-  }
-
-  .blog-card:hover {
-    transform: scale(1.02) rotate(0);
+    @apply overflow-hidden transition-all duration-300 hover:shadow-xl bg-white rounded-[20px];
   }
 
   .blog-card-content {
     @apply p-6;
-    border-radius: 0 0 20px 20px;
   }
 
   .blog-card-image {
     @apply relative w-full h-48 overflow-hidden;
-    border-radius: 20px 20px 0 0;
   }
 
   .google-doc-embed {
@@ -205,11 +160,6 @@
 
   .coming-soon-card {
     @apply relative overflow-hidden bg-white rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all;
-  }
-
-  .coming-soon-blob {
-    @apply absolute blob-shape-small opacity-30;
-    animation: float 6s ease-in-out infinite;
   }
 }
 

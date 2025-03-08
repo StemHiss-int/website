@@ -1,14 +1,20 @@
 import type React from "react"
-import { Playfair_Display } from "next/font/google"
-import { Inter } from "next/font/google"
+import { Playfair_Display, Inter } from "next/font/google"
 import type { Metadata } from "next"
-import "./globals.css"
 import Navbar from "@/components/navbar"
 import { cn } from "@/lib/utils"
 
-const inter = Inter({ subsets: ["latin"] })
+// Import styles
+import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+})
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-playfair",
 })
 
@@ -24,9 +30,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn(playfair.variable)}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
         <Navbar />
-        <main className="relative">{children}</main>
+        <main className="relative pt-16">{children}</main>
       </body>
     </html>
   )
