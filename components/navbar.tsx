@@ -138,9 +138,9 @@ export default function Navbar() {
         <div className="nav-content">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full bg-accent p-1">
+            <div className="relative w-10 h-10 overflow-hidden rounded-full bg-white p-1">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview-MlNXjaPzTkex1vj7Vs7FkRF7q4pZtP.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-B6cGDEkp45slUV6qTQrIhQjLVJJ9UA.webp"
                 alt="STEMHiss Logo"
                 fill
                 className="object-contain"

@@ -16,7 +16,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
           <div className="w-32 h-32 relative mb-6 blob-shape overflow-hidden bg-white p-2">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview-MlNXjaPzTkex1vj7Vs7FkRF7q4pZtP.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-B6cGDEkp45slUV6qTQrIhQjLVJJ9UA.webp"
               alt="STEMHiss Logo"
               fill
               className="object-contain"
