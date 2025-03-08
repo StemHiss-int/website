@@ -22,7 +22,7 @@ export default function BlogPage() {
         </div>
 
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-6xl font-bold font-serif italic text-white mb-4">Our Blog</h1>
+          <h1 className="text-5xl md:text-6xl font-bold font-serif italic text-quaternary mb-4">Our Blog</h1>
           <p className="text-xl text-quaternary/90 max-w-2xl mx-auto">
             Explore the fascinating history of STEM through our collection of articles
           </p>
