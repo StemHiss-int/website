@@ -1,9 +1,11 @@
 "use client"
 
+import type React from "react"
+
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { usePathname, useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -27,21 +29,33 @@ const navItems = [
   { name: "Newsletter", href: "/newsletter" },
   { name: "Videos", href: "/videos" },
   { name: "Get Involved", href: "/get-involved" },
-  { name: "Contacts", href: "/contacts" },
+  { name: "Contest", href: "/contest" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
 
 export default function Navbar() {
   const pathname = usePathname()
+  const router = useRouter()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [openSubMenus, setOpenSubMenus] = useState<string[]>([])
+
+  // Close mobile menu when pathname changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
 
   const toggleSubMenu = (name: string) => {
     setOpenSubMenus((prev) => (prev.includes(name) ? prev.filter((item) => item !== name) : [...prev, name]))
   }
 
   const isActive = (href: string) => pathname === href
+
+  const handleLinkClick = (href: string, e: React.MouseEvent) => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false)
+    }
+  }
 
   const renderNavItems = (items: any[], mobile = false) => {
     return items.map((item, index) => {
@@ -70,11 +84,10 @@ export default function Navbar() {
                 <div key={subIndex}>
                   <Link
                     href={subItem.href}
+                    onClick={(e) => handleLinkClick(subItem.href, e)}
                     className={cn(
-                      mobile
-                        ? "mobile-menu-link block"
-                        : "block px-4 py-2 rounded-lg hover:bg-primary/10 text-foreground",
-                      isActive(subItem.href) && (mobile ? "active" : "bg-primary/10"),
+                      mobile ? "mobile-menu-link block" : "block px-4 py-2 rounded-lg hover:bg-accent text-foreground",
+                      isActive(subItem.href) && (mobile ? "active" : "bg-accent"),
                     )}
                   >
                     {subItem.name}
@@ -86,11 +99,12 @@ export default function Navbar() {
                         <Link
                           key={nestedIndex}
                           href={nestedItem.href}
+                          onClick={(e) => handleLinkClick(nestedItem.href, e)}
                           className={cn(
                             mobile
                               ? "mobile-menu-link block"
-                              : "block px-4 py-2 rounded-lg hover:bg-primary/10 text-foreground",
-                            isActive(nestedItem.href) && (mobile ? "active" : "bg-primary/10"),
+                              : "block px-4 py-2 rounded-lg hover:bg-accent text-foreground",
+                            isActive(nestedItem.href) && (mobile ? "active" : "bg-accent"),
                           )}
                         >
                           {nestedItem.name}
@@ -109,6 +123,7 @@ export default function Navbar() {
         <Link
           key={index}
           href={item.href}
+          onClick={(e) => handleLinkClick(item.href, e)}
           className={cn(mobile ? "mobile-menu-link" : "nav-link", isActive(item.href) && "active")}
         >
           {item.name}
@@ -123,7 +138,7 @@ export default function Navbar() {
         <div className="nav-content">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full bg-white/20 p-1">
+            <div className="relative w-10 h-10 overflow-hidden rounded-full bg-accent p-1">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview-MlNXjaPzTkex1vj7Vs7FkRF7q4pZtP.png"
                 alt="STEMHiss Logo"

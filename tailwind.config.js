@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx,js,jsx}",
+    "./components/**/*.{ts,tsx,js,jsx}",
+    "./app/**/*.{ts,tsx,js,jsx}",
+    "./src/**/*.{ts,tsx,js,jsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -66,10 +66,22 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
+        serif: ["var(--font-playfair)", "serif"],
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
+  safelist: [
+    "bg-white",
+    "bg-accent",
+    "bg-primary",
+    "bg-secondary",
+    "bg-tertiary",
+    "bg-quaternary",
+    "hover:bg-accent/50",
+    "hover:bg-primary/10",
+    "hover:bg-secondary/10",
+    "hover:bg-tertiary/10",
+  ],
 }
 
