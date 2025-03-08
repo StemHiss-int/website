@@ -53,22 +53,22 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-6">Board of Members</h2>
             <ul className="space-y-3">
               <li>
-                <span className="font-medium">Urian Mangal Sivakumar</span> - Founder and President
+                <span className="font-medium">Velan Mangai Sivakumar</span> - Founder and President
               </li>
               <li>
-                <span className="font-medium">Aakash Vinay Rao</span> - Vice President
+                <span className="font-medium">Adil Mukhi</span> - Founding Vice President
               </li>
               <li>
-                <span className="font-medium">Adil Wahls</span> - Vice President
+                <span className="font-medium">Aarush Vinay Rao</span> - Vice President
               </li>
               <li>
-                <span className="font-medium">Chirantan Hazra</span> - Senior Graphic Designer
+                <span className="font-medium">Chirantan Masur</span> - Senior Graphic Designer
               </li>
               <li>
                 <span className="font-medium">Melody Chang</span> - Junior Graphic Designer
               </li>
               <li>
-                <span className="font-medium">Anike Singh</span> - Head of Communications
+                <span className="font-medium">Anika Singh</span> - Head of Communications
               </li>
               <li>
                 <span className="font-medium">Shyam Challa</span> - Editor and Chief Writer

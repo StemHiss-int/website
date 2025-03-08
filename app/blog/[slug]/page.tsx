@@ -12,49 +12,49 @@ const blogPosts = [
     category: "Genetics",
     headerImage:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-03-07%20180331-91tJuG1P1DxMVPllLJJeYQt5abJuHJ.png",
-    googleDocId: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", // Example Google Doc ID
-    date: "March 15, 2025",
-    author: "Shyam Challa",
+    googleDocId: "e/2PACX-1vSJiLYBOwY0VxUwiEm8e33IrNc3VU8CFXQMyTeVPHFAqzk5CeHVTaq1F89F3xXWIAQuL1DwRorgLsmqs", // Example Google Doc ID
+    date: "March 1, 2025",
+    author: "Velan Mangai Sivakumar",
   },
   {
     slug: "dna-structure",
-    title: "The Double Helix",
-    subtitle: "Watson, Crick, and the Structure of DNA",
+    title: "Coming Soon",
+    subtitle: "Coming Soon",
     category: "Genetics",
     headerImage: "/placeholder.svg?height=500&width=1000",
     googleDocId: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", // Example Google Doc ID
-    date: "March 10, 2025",
-    author: "Urian Mangal Sivakumar",
+    date: "Coming Soon",
+    author: "Coming Soon",
   },
   {
     slug: "infectious-diseases",
-    title: "Conquering Infectious Diseases",
-    subtitle: "Humanity's Battle Against Deadly Pathogens",
+    title: "Coming Soon",
+    subtitle: "Coming Soon",
     category: "Pathophysiology",
     headerImage: "/placeholder.svg?height=500&width=1000",
     googleDocId: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", // Example Google Doc ID
-    date: "March 5, 2025",
-    author: "Adil Wahls",
+    date: "Coming Soon",
+    author: "Coming Soon",
   },
   {
     slug: "einstein-relativity",
-    title: "Einstein and Relativity",
-    subtitle: "Revolutionizing Our Understanding of Space and Time",
+    title: "Coming Soon",
+    subtitle: "Coming Soon",
     category: "Physics",
     headerImage: "/placeholder.svg?height=500&width=1000",
     googleDocId: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", // Example Google Doc ID
-    date: "February 28, 2025",
-    author: "Aakash Vinay Rao",
+    date: "Coming Soon",
+    author: "Coming Soon",
   },
   {
     slug: "fibonacci-sequence",
-    title: "The Fibonacci Sequence",
-    subtitle: "Nature's Mathematical Pattern",
+    title: "Coming Soon",
+    subtitle: "Coming Soon",
     category: "Mathematics",
     headerImage: "/placeholder.svg?height=500&width=1000",
     googleDocId: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms", // Example Google Doc ID
-    date: "February 20, 2025",
-    author: "David Simmons",
+    date: "Coming Soon",
+    author: "Coming Soon",
   },
 ]
 
