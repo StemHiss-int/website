@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, ExternalLink, Website } from "lucide-react"
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react"
 
 export default function Contacts() {
   return (
@@ -38,7 +38,7 @@ export default function Contacts() {
                     <div className="font-medium">Adil Mukhi</div>
                     <div className="text-sm text-muted-foreground">Vice President</div>
                     <div className="mt-2 flex items-center gap-2 text-sm">
-                      <Website className="h-4 w-4" />
+                      <Mail className="h-4 w-4" />
                       <a
                         href="https://linktr.ee/adilm."
                         target="_blank"
